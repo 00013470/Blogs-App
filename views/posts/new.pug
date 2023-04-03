@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  h1 Create a New Post
+
+  form.form(method='POST', action='/posts')
+    label.title(for='title') Title:
+    input(type='text', id='title', name='title', required)
+
+    label.authorr(for='author') Author:
+    input(type='text', id='author', name='author', required)
+
+    label.content(for='content') Content:
+    textarea(id='content', name='content', required)
+
+    button.save(type='submit') Save
+

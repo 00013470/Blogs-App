@@ -1,0 +1,18 @@
+extends layout
+
+block content
+
+  h1 Edit Post
+
+  form.form(action=`/posts/${post.id}?_method=PUT` method="POST")
+    label.title3(for="title") Title:
+    input(type="text" name="title" id="title" value=`${post.title}` required)
+    br
+    label.author3(for="author") Author:
+    input(type="text" name="author" id="author" value=`${post.author}` required)
+    br
+    label.content3(for="content") Content:
+    textarea(name="content" id="content" rows="10" required)= post.content
+    br
+    button.save3(type="submit") Save Changes
+

@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  h2 All Posts
+  ul
+    each post in posts
+      li
+        h3= post.title
+        p= post.content
+        p Posted on #{post.createdAt} 
+
+        a(href=`/posts/${post.id}/edit`) Edit
+        
+        a.delete(href=`/${ post.id }/delete`) Delete
+
+  a.newPost(href='/posts/new') New Post

@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/styles/style.css')
+  body
+    header
+      h1 Blog Application
+      nav
+        ul
+          li: a(href='/') Home
+          li: a(href='/posts') All Posts
+          li: a(href='/posts/new') New Post
+    .container
+      block content
+    footer
+      p &copy; 2023 Blog Application
